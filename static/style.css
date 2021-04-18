@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
-    background: #000;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,13,82,1) 100%);
+
 }
 
 html, body {
@@ -27,12 +28,26 @@ html, body {
     background: #0a222c;
 }
 
+.btn-action-2 {
+    border-radius: 50px;
+    border: 1px #fff solid;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100px;
+    font-weight: 300;
+    color: #fff;
+    background: #0a222c;
+}
+
+.bg-dark {
+    background: rgba(22, 22, 22, 0.8) !important;
+}
 .hero {
     height: 100vh;
 }
 
 .bg-indigo {
-    background: 020415;
+    background: #020415;
     border: 5px #fff solid;
     border-radius: 20px;
 }

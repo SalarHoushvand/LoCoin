@@ -16,7 +16,14 @@
 </head>
 
 <body>
-    <div class="container p-4">
+    <div class="container p-4 ">
+        <div id="msg" style="background: rgba(0, 0, 0, 0.8); bottom:0; top:0; left:0; right:0; z-index:10"
+            class="position-fixed d-none">
+            <div class="p-4 mx-auto my-auto rounded bg-dark">
+                <h4 class="mb-4">Thank you for subscribing</h4>
+                <button id="ok" class="p-2 btn btn-action-2">OK</button>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div class="hero position-relative d-flex">
@@ -59,7 +66,7 @@
                     <div class="d-flex">
                         <div class="mx-auto w-50 position-relative md-100">
                             <input type="text" class="mx-auto mb-4 w-100 h-75" placeholder="Enter your email">
-                            <button class="btn position-absolute btn-subscribe h-75"
+                            <button id="subscribe" class="btn position-absolute btn-subscribe h-75"
                                 style="right: 0;">Subscribe</button>
                         </div>
                     </div>
@@ -85,6 +92,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        $("#subscribe").click(function () {
+            $("#msg").toggleClass("d-none");
+        });
+        $("#subscribe").click(function () {
+            $("#msg").toggleClass("d-flex");
+        });
+        $("#ok").click(function () {
+            $("#msg").removeClass("d-flex");
+        });
+        $("#ok").click(function () {
+            $("#msg").addClass("d-none");
+        });
+    </script>
 </body>
 
 </html>
